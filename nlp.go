@@ -9,6 +9,7 @@ var (
 	wordRe = regexp.MustCompile("[[:alpha:]]+")
 )
 
+// Tokenzied returns a slice of tokens found in text -> this is the way go docs will see it well.
 func Tokenize(text string) []string {
 	words := wordRe.FindAllString(text, -1)
 	var tokens []string
